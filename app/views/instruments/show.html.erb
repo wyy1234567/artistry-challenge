@@ -1,0 +1,14 @@
+<h4>Instrument Info:</h4>
+<strong><p>Name: </strong><%= @instrument.name %></p>
+<strong><p>Classification: </strong><%= @instrument.classification %></p>
+
+<% if !@instrument.posts.empty? %>
+    <strong><p>Artists who play this instrument: </strong>
+    <ul>
+        <% @instrument.posts.each do |post| %>
+            <li><%= post.artist.name %></li>
+        <% end %>
+    </ul>
+<% end %>
+
+<%= link_to 'Edit', edit_instrument_path %>

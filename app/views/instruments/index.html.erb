@@ -1,0 +1,10 @@
+<h3>All instruments: </h3>
+
+<ul>
+    <% @instruments.each do |ins| %>
+        <% full = ins.name + ", " + ins.classification %>
+        <li><%= link_to full, instrument_path(ins) %></li>
+    <% end %>
+</ul>
+
+<%= link_to 'Add an instrument', new_instrument_path %>

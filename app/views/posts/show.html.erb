@@ -1,0 +1,7 @@
+<h3>Post info:</h3>
+
+<strong><p>Name: </strong><%= @post.name %></p>
+<strong><p>Instrument: </strong><%= @post.instrument.name %></p>
+<strong><p>Artist: </strong><%= @post.artist.name %></p>
+
+<%= link_to 'Edit this post', edit_post_path(@post) %>
